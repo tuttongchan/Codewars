@@ -335,6 +335,128 @@
 // ]);
 //   '0,1,2,3,45\n10,11,12,13,14\n20,21,22,23,24\n30,31,32,33,34';
 
-// ------------
+// ------------ For Twins: 1. Types (NOT DONE) ------------
 
+// function typeValidation(variable, type) {
+//   if (typeof variable === 'number' && type === 'number') {
+//     return true;
+//   } else if (typeof variable === 'string') {
+//     return false;
+//   }
+// }
 
+// console.log(typeValidation(42, 'number'))
+
+// ------------ Get the Middle Character (DONE) ------------
+
+// function getMiddle(s) {
+//   if (s.length % 2 === 0) {
+//     const even = s.length / 2;
+//     const second = even - 1;
+//     return s[second] + s[even];
+//   } else if (s.length % 2 !== 0) {
+//     const odd = s.length / 2;
+//     const rounded = Math.floor(odd);
+//     return s[rounded]
+//   }
+// }
+
+// getMiddle('testing')
+// getMiddle('middle');
+
+// ------------ Vowel Count (DONE) ------------
+
+// function getCount(str) {
+//   let vowelsCount = 0;
+//   let arr = [];
+
+//   for (let i = 0; i < str.length; i++) {
+//     if (
+//       str[i] == 'a' ||
+//       str[i] == 'e' ||
+//       str[i] == 'i' ||
+//       str[i] == 'o' ||
+//       str[i] == 'u'
+//     ) {
+//       arr.push(1);
+//     }
+//   }
+//   vowelsCount = arr.length;
+
+//   return vowelsCount;
+// }
+
+// getCount('abracadabra');
+// console.log(getCount("abracadabra"))
+
+// ------------ Vowel Count (DONE) ------------
+
+// function bmi(weight, height) {
+//   answer = weight / height ** 2;
+
+//   if (answer <= 18.5) {
+//     return 'Underweight';
+//   } else if (answer <= 25) {
+//     return 'Normal';
+//   } else if (answer <= 30) {
+//     return 'Overweight';
+//   } else if (answer > 30) {
+//     return 'Obese';
+//   }
+// }
+
+// // bmi(80, 1.8);
+// console.log(bmi(80, 1.80))
+
+// ------------ Stop gninnipS My sdroW! ------------
+
+// function spinWords(string) {
+//   let arr = [];
+//   const stringArr = string.split(' ');
+
+//   const hello = stringArr.filter((item, i) => {
+//     if (item.length >= 5) {
+//       for (let i = 0; i < item.length; i++) {
+//         console.log(item[i]);
+//       }
+//     }
+//   });
+// }
+
+// --- Most Popular Solution ---
+// function spinWords(words) {
+//   return words
+//     .split(' ')
+//     .map(function (word) {
+//       return word.length > 4 ? word.split('').reverse().join('') : word;
+//     })
+//     .join(' ');
+// }
+
+// spinWords('Hey fellow warriors');
+// console.log(spinWords('Hey fellow warriors'))
+
+// ------------ Twice as old ------------
+
+// function twiceAsOld(dadYearsOld, sonYearsOld) {
+//   const sonYearsTwice = sonYearsOld * 2;
+
+//   if (dadYearsOld > sonYearsTwice) {
+//     return dadYearsOld - sonYearsTwice;
+//   } else if (dadYearsOld < sonYearsTwice) {
+//     const newYears = sonYearsTwice - dadYearsOld;
+//     return newYears;
+//   } else if (dadYearsOld % sonYearsTwice == 0) {
+//     return 0;
+//   } else if (sonYearsOld == 0) {
+//     return dadYearsOld;
+//   }
+// }
+
+// console.log(twiceAsOld(36, 7));
+// console.log(twiceAsOld(55, 30));
+// console.log(twiceAsOld(42, 21));
+// console.log(twiceAsOld(22, 1));
+// console.log(twiceAsOld(29, 0));
+
+// ------------ Twice as old ------------
