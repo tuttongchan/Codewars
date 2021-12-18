@@ -436,7 +436,7 @@
 // spinWords('Hey fellow warriors');
 // console.log(spinWords('Hey fellow warriors'))
 
-// ------------ Twice as old ------------
+// ------------ Twice as old (DONE) ------------
 
 // function twiceAsOld(dadYearsOld, sonYearsOld) {
 //   const sonYearsTwice = sonYearsOld * 2;
@@ -459,4 +459,163 @@
 // console.log(twiceAsOld(22, 1));
 // console.log(twiceAsOld(29, 0));
 
-// ------------ Twice as old ------------
+// ------------ Define a card suit (DONE) ------------
+
+// function defineSuit(card) {
+//   return card.includes('♠')
+//     ? 'spades'
+//     : card.includes('♦')
+//     ? 'diamonds'
+//     : card.includes('♥')
+//     ? 'hearts'
+//     : card.includes('♣')
+//     ? 'clubs'
+//     : null;
+// }
+
+// console.log(defineSuit('3♣'));
+// console.log(defineSuit('Q♠'));
+// console.log(defineSuit('9♦'));
+// console.log(defineSuit('J♥'));
+
+// ------------ Vowel remover (NOT DONE) ------------
+// function shortcut(string) {
+//   let arr = [];
+//   for (let i = 0; i < string.length; i++) {
+//     arr.push(string[i]);
+//   }
+//   arr.map((item, i) => {
+//     console.log(item);
+//   });
+// }
+
+// function shortcut(string) {
+//   if (string.includes('a')) {
+//     return string.replace('a', '');
+//   } else if (string.includes('e')) {
+//     return string.replace('e', '');
+//   } else if (string.includes('i')) {
+//     return string.replace('i', '');
+//   } else if (string.includes('o')) {
+//     return string.replace('o', '');
+//   } else if (string.includes('u')) {
+//     return string.replace('u', '');
+//   }
+// }
+
+// console.log(shortcut('hello'));
+// console.log(shortcut('how are you today?'))
+// console.log(shortcut('complain'))
+// console.log(shortcut('never'))
+
+// ------------ Highest and Lowest (DONE) ------------
+
+// function highAndLow(numbers) {
+//   let arrMin = [];
+//   let arrMax = [];
+
+//   const splitNumbers = numbers.split(' ');
+
+//   splitNumbers.map((item) => {
+//     arrMin.push(Number(item));
+//     arrMax.push(Number(item));
+//   });
+
+//   const numMin = Math.min(...arrMin);
+//   const numMax = Math.max(...arrMax);
+
+//   const stringMin = numMin.toString();
+//   const stringMax = numMax.toString();
+
+//   return stringMax + ' ' + stringMin;
+// }
+
+// highAndLow('1 2 -3 4 5');
+// highAndLow('1 9 3 4 -5');
+
+// ------------ JavaScript Array Filter (DONE) ------------
+
+// function getEvenNumbers(numbersArray) {
+//   const filteredArr = numbersArray.filter((item) => {
+//     const stringItem = item.toString();
+//     const lastChar = stringItem.substr(-1);
+
+//     return (
+//       lastChar == 0 ||
+//       lastChar == 2 ||
+//       lastChar == 4 ||
+//       lastChar == 6 ||
+//       lastChar == 8
+//     );
+//   });
+
+//   return filteredArr;
+// }
+
+// console.log(getEvenNumbers([1, 2, 3, 6, 8, 10]));
+// console.log(getEvenNumbers([12, 14, 15]));
+// console.log(getEvenNumbers([13, 15]));
+
+// getEvenNumbers([1, 2, 3, 6, 8, 10]);
+// getEvenNumbers([12, 14, 15]);
+// getEvenNumbers([13, 15]);
+
+// ------------ Is he gonna survive? (DONE) ------------
+
+// function hero(bullets, dragons) {
+//   const bulletsHalf = bullets / 2;
+
+//   if (bulletsHalf >= dragons) {
+//     return true;
+//   } else if (bulletsHalf < dragons) {
+//     return false;
+//   }
+// }
+
+// console.log(hero(10, 5));
+// console.log(hero(7, 4));
+// console.log(hero(4, 5));
+
+// ------------ Is he gonna survive? (DONE) ------------
+
+// function checkTheBucket(bucket) {
+//   if (bucket.includes('gold')) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// console.log(checkTheBucket(['stone', 'stone', 'stone', 'stone', 'stone']));
+// console.log(checkTheBucket(['stone', 'stone', 'stone', 'stone', 'gold']));
+
+// ------------ Create Phone Number (DONE) ------------
+
+// function createPhoneNumber(numbers) {
+//   const firstPart = numbers.splice(0, 3);
+//   const secondPart = numbers.splice(0, 3);
+//   const thirdPart = numbers;
+
+//   const firstJoined = firstPart.join().replace(',', '').replace(',', '');
+//   const secondJoined = secondPart.join().replace(',', '').replace(',', '');
+//   const thirdJoined = thirdPart
+//     .join()
+//     .replace(',', '')
+//     .replace(',', '')
+//     .replace(',', '');
+
+//   return `${'(' + firstJoined + ')'} ${secondJoined}-${thirdJoined}`;
+// }
+
+// -- Best Solution --
+// function createPhoneNumber(numbers) {
+//   var format = '(xxx) xxx-xxxx';
+
+//   for (var i = 0; i < numbers.length; i++) {
+//     format = format.replace('x', numbers[i]);
+//   }
+
+//   return format;
+// }
+
+// console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
