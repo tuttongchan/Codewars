@@ -619,3 +619,136 @@
 // }
 
 // console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
+
+// ------------ Find The Parity Outlier (DONE) ------------
+
+// function findOutlier(integers) {
+//   let arr = [];
+//   let final;
+
+//   for (let i = 0; i < integers.length; i++) {
+//     const even = integers[i] % 2 == 0;
+//     arr.push(even);
+//   }
+//   const filteredEven = arr.filter((item) => {
+//     return item == true;
+//   });
+//   const filteredOdd = arr.filter((item) => {
+//     return item == false;
+//   });
+//   const filteredIntegersOdd = integers.filter((item) => {
+//     return item % 2 != 0;
+//   });
+//   const filteredIntegersEven = integers.filter((item) => {
+//     return item % 2 == 0;
+//   });
+
+//   if (filteredEven.length > filteredOdd.length) {
+//     filteredIntegersOdd.map((item) => {
+//       final = item;
+//     });
+//     return final;
+//   } else if (filteredEven.length < filteredOdd.length) {
+//     filteredIntegersEven.map((item) => {
+//       final = item;
+//     });
+//     return final;
+//   }
+// }
+
+// console.log(findOutlier([1, 2, 3]));
+// console.log(findOutlier([2, 6, 8, 10, 3]));
+
+// ------------ Shortest Word (DONE) ------------
+
+// function findShort(s) {
+//   let arr = [];
+//   const splitString = s.split(' ');
+
+//   splitString.map((item) => {
+//     arr.push(item.length);
+//   });
+
+//   return Math.min(...arr);
+// }
+
+// findShort('bitcoin take over the world maybe who knows perhaps');
+// findShort('turns out random test cases are easier than writing out basic ones');
+// findShort("Let's travel abroad shall we");
+
+// ------------ Isograms (NOT DONE) ------------
+
+// function isIsogram(str) {
+//   const splitArr = str.split('');
+
+//   splitArr.map((item) => {
+//     console.log(item);
+//   });
+// }
+
+// console.log(isIsogram('isogram'));
+// console.log(isIsogram('aba'));
+
+// isIsogram('isogram');
+// isIsogram('aba');
+
+// ------------ Convert boolean values to strings 'Yes' or 'No' (DONE) ------------
+
+// function boolToWord(bool) {
+//   if (bool === true) {
+//     return 'Yes';
+//   } else if (bool === false) {
+//     return 'No';
+//   }
+// }
+
+// boolToWord(true);
+// boolToWord(false);
+
+// ------------ Return Negative (DONE) ------------
+
+// function makeNegative(num) {
+//   return Math.abs(num) * -1;
+// }
+
+// console.log(makeNegative(42));
+
+// ------------ Moving Zeros To The End (DONE) ------------
+
+// const moveZeros = function (arr) {
+//   const filterZeros = arr.filter((item) => {
+//     return item === 0;
+//   });
+//   const filterNonZeros = arr.filter((item) => {
+//     return item !== 0;
+//   });
+//   filterZeros.map((item) => {
+//     filterNonZeros.push(item);
+//   });
+//   return filterNonZeros
+// };
+
+// console.log(moveZeros([1, 2, 0, 1, 0, 1, 0, 3, 0, 1]));
+
+// ------------ Moving Zeros To The End (UNLOCKED) ------------
+
+// -- Best Solution #1 --
+// function accum(s) {
+//   return s
+//     .split('')
+//     .map((c, i) => c.toUpperCase() + c.toLowerCase().repeat(i))
+//     .join('-');
+// }
+
+// -- Best Solution #2 --
+// function accum(s) {
+//   return s
+//     .split('')
+//     .map((x, index) => x.toUpperCase() + Array(index + 1).join(x.toLowerCase()))
+//     .join('-');
+// }
+
+// accum('ZpglnRxqenU');
+// accum("NyffsGeyylB")
+
+// ------------  ------------
